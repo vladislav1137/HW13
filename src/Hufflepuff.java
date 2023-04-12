@@ -9,4 +9,20 @@ public class Hufflepuff extends Hogwarts{
         this.loaylty = loaylty;
         this.honesty = honesty;
     }
+    private int getHufflepuffTotalPower() {
+        return hardworking+loaylty+honesty;
+    }
+    public void hufflepuffCompareTo(Hufflepuff other) {
+        if (other.getHufflepuffTotalPower() < this.getHufflepuffTotalPower()) {
+            System.out.println(this.getName()+ " лучший Пуфендуй, чем " + other.getName());
+        } else if (other.getHufflepuffTotalPower() > this.getHufflepuffTotalPower()) {
+            System.out.println(other.getName() + " лучший Пуфендуй, чем " + this.getName());
+        } else {
+            System.out.println("ученики равны по силе");
+        }
+    }
+    @Override
+    public String toString() {
+        return super.toString()+", hardworking: " +hardworking+ ", loaylty: " +loaylty+ ", honesty: "+honesty;
+    }
 }
